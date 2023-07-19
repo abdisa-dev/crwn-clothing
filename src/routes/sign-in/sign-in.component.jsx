@@ -2,6 +2,8 @@ import {signInWithgooglePopup} from "../../utils/firebase/firebase.utils"
 
 
 const SignIn = () => {
+
+  // async func just because of the response came from server/db / firebase/firestore
   const logGoogleUser = async () => {
     const response = await signInWithgooglePopup();
     console.log(response)

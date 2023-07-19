@@ -17,11 +17,17 @@ const firebaseConfig = {
 
 };
 
+// init firebase app which integrated with the console 
 const firebaseApp = initializeApp(firebaseConfig)
 
+// authorization provider weather the user is valid or not
 const provider = new GoogleAuthProvider()
 
+// custom parameter display if there are multiple account on provide signin
 provider.setCustomParameters({prompt: 'select_account'})
 
+// authentication key to authernticate with providers
 export const auth = getAuth()
+
+// way to provide signin inthis case popup dialog which recives to params the auth and provider to validate the user 
 export const signInWithgooglePopup = () => signInWithPopup(auth, provider)

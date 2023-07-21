@@ -32,3 +32,11 @@ export const auth = getAuth()
 
 // way to provide signin inthis case popup dialog which recives to params the auth and provider to validate the user 
 export const signInWithgooglePopup = () => signInWithPopup(auth, provider)
+
+// initalizing database
+export const db = getFirestore()
+
+export const createUserDocFromAuth = async (userAuth) => {
+  const userDocRef = doc(db, "users", userAuth.uid)
+  console.log(userDocRef)
+}

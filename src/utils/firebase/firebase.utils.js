@@ -1,5 +1,5 @@
 import {initializeApp} from "firebase/app"
-import {getAuth, signInWithPopup, signInWithRedirect, GoogleAuthProvider} from "firebase/auth"
+import {getAuth, signInWithPopup, GoogleAuthProvider} from "firebase/auth"
 import {getFirestore, doc, getDoc, setDoc} from "firebase/firestore"
 
 const firebaseConfig = {
@@ -32,7 +32,7 @@ export const auth = getAuth()
 
 // way to provide signin in this case popup dialog which recives two params the auth and provider to validate the user 
 export const signInWithgooglePopup = () => signInWithPopup(auth, googleProvider)
-export const signInWithgoogleRedirect = () => signInWithRedirect(auth, googleProvider)
+
 
 // initalizing database
 export const db = getFirestore()

@@ -1,24 +1,14 @@
-import {auth, signInWithgooglePopup, signInWithgoogleRedirect,createUserDocFromAuth} from "../../utils/firebase/firebase.utils"
-import { useEffect } from "react";
-import { getRedirectResult } from "firebase/auth";
+import { signInWithgooglePopup, signInWithgoogleRedirect,createUserDocFromAuth} from "../../utils/firebase/firebase.utils"
+
 
 const SignIn = () => {
 
-  useEffect(() => {
-  const getRedirectResultResponse = async () => {
-      const response = await getRedirectResult(auth);
-      if (response){
-        const {user} = response;
-        createUserDocFromAuth(user)
-      }
-    }
-    getRedirectResultResponse()
-  }, [])
+ 
 
   // async func just because of the response came from server/db / firebase/firestore
   const logGoogleUser = async () => {
     const {user} = await signInWithgooglePopup();
-    createUserDocFromAuth(user)
+    const userDocRef = await createUserDocFromAuth(user)
   }
 
   

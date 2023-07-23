@@ -7,6 +7,7 @@ const SignIn = () => {
   useEffect(() => {
   const getRedirectResultResponse = async () => {
       const response = await getRedirectResult(auth);
+      
       console.log(response)
     }
     getRedirectResultResponse()

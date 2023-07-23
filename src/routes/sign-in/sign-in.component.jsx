@@ -1,4 +1,4 @@
-import { signInWithgooglePopup, signInWithgoogleRedirect,createUserDocFromAuth} from "../../utils/firebase/firebase.utils"
+import { signInWithgooglePopup,createUserDocFromAuth} from "../../utils/firebase/firebase.utils"
 
 
 const SignIn = () => {
@@ -16,7 +16,6 @@ const SignIn = () => {
     <div>
       <h1>Sign In Page</h1>
       <button onClick={logGoogleUser}>Sign In with google popup</button>
-      <button onClick={signInWithgoogleRedirect}>Sign In with google Redirect</button>
     </div>
   )
 }

@@ -11,7 +11,7 @@ const SignIn = () => {
     const userDocRef = await createUserDocFromAuth(user)
   }
 
-  // just to get 1 streak
+
   return (
     <div>
       <h1>Sign In Page</h1>
